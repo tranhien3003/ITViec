@@ -6,3 +6,5 @@ deep-translator==1.11.4
 nltk==3.8.1
 regex==2024.5.10
 openpyxl==3.1.2
+matplotlib==3.8.4
+xgboost==2.0.3
