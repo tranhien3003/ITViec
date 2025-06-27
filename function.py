@@ -91,74 +91,74 @@ def classify_sentiment(row):
 # Hàm load dictionary từ file txt
 # ======================================
 
-def load_dictionaries():
-    """
-    Load tất cả dictionary từ các file txt:
-    - emoji_dict
-    - teen_dict
-    - english_dict
-    - wrong_lst
-    - stopwords_lst
+# def load_dictionaries():
+#     """
+#     Load tất cả dictionary từ các file txt:
+#     - emoji_dict
+#     - teen_dict
+#     - english_dict
+#     - wrong_lst
+#     - stopwords_lst
 
-    Trả về: tuple gồm 5 đối tượng
-    """
-    # Emoji
-    emoji_dict = {}
-    with open("emojicon.txt", "r", encoding="utf-8") as f:
-        for line in f:
-            parts = line.strip().split('\t')
-            if len(parts) == 2:
-                key, val = parts
-                emoji_dict[key] = val
+#     Trả về: tuple gồm 5 đối tượng
+#     """
+#     # Emoji
+#     emoji_dict = {}
+#     with open("emojicon.txt", "r", encoding="utf-8") as f:
+#         for line in f:
+#             parts = line.strip().split('\t')
+#             if len(parts) == 2:
+#                 key, val = parts
+#                 emoji_dict[key] = val
 
-    # Teencode
-    teen_dict = {}
-    with open("teencode.txt", "r", encoding="utf-8") as f:
-        for line in f:
-            parts = line.strip().split('\t')
-            if len(parts) == 2:
-                key, val = parts
-                teen_dict[key] = val
+#     # Teencode
+#     teen_dict = {}
+#     with open("teencode.txt", "r", encoding="utf-8") as f:
+#         for line in f:
+#             parts = line.strip().split('\t')
+#             if len(parts) == 2:
+#                 key, val = parts
+#                 teen_dict[key] = val
 
-    # English-Vietnamese
-    english_dict = {}
-    with open("english-vnmese.txt", "r", encoding="utf-8") as f:
-        for line in f:
-            parts = line.strip().split('\t')
-            if len(parts) == 2:
-                key, val = parts
-                english_dict[key] = val
+#     # # English-Vietnamese
+#     # english_dict = {}
+#     # with open("english-vnmese.txt", "r", encoding="utf-8") as f:
+#     #     for line in f:
+#     #         parts = line.strip().split('\t')
+#     #         if len(parts) == 2:
+#     #             key, val = parts
+#     #             english_dict[key] = val
 
-    # Từ sai
-    wrong_lst = []
-    with open("wrong-word.txt", "r", encoding="utf-8") as f:
-        wrong_lst = [line.strip() for line in f if line.strip()]
+#     # Từ sai
+#     wrong_lst = []
+#     with open("wrong-word.txt", "r", encoding="utf-8") as f:
+#         wrong_lst = [line.strip() for line in f if line.strip()]
 
-    # Stopwords
-    stopwords_lst = []
-    with open("vietnamese-stopwords.txt", "r", encoding="utf-8") as f:
-        stopwords_lst = [line.strip() for line in f if line.strip()]
+#     # Stopwords
+#     stopwords_lst = []
+#     with open("vietnamese-stopwords.txt", "r", encoding="utf-8") as f:
+#         stopwords_lst = [line.strip() for line in f if line.strip()]
 
-    return emoji_dict, teen_dict, wrong_lst, english_dict, stopwords_lst
+#     return emoji_dict, teen_dict, wrong_lst, english_dict, stopwords_lst
 
 
-#=================================================================
-# Hàm rút gọn địa điểm
-# Hàm rút gọn địa điểm
-def extract_city(location_str):
-    if pd.isna(location_str):
-        return "Unknown"
-    location_str = location_str.lower()
-    if "hà nội" in location_str or "ha noi" in location_str:
-        return "Hà Nội"
-    elif "hồ chí minh" in location_str or "ho chi minh" in location_str or "hcm" in location_str:
-        return "Hồ Chí Minh"
-    elif "đà nẵng" in location_str or "da nang" in location_str:
-        return "Đà Nẵng"
-    elif "cần thơ" in location_str or "can tho" in location_str:
-        return "Cần Thơ"
-    else:
-        return "Khác"
+# #=================================================================
+# # Hàm rút gọn địa điểm
+# # Hàm rút gọn địa điểm
+# def extract_city(location_str):
+#     if pd.isna(location_str):
+#         return "Unknown"
+#     location_str = location_str.lower()
+#     if "hà nội" in location_str or "ha noi" in location_str:
+#         return "Hà Nội"
+#     elif "hồ chí minh" in location_str or "ho chi minh" in location_str or "hcm" in location_str:
+#         return "Hồ Chí Minh"
+#     elif "đà nẵng" in location_str or "da nang" in location_str:
+#         return "Đà Nẵng"
+#     elif "cần thơ" in location_str or "can tho" in location_str:
+#         return "Cần Thơ"
+#     else:
+#         return "Khác"
     
 #=================================================================
 # Chuẩn hóa về tiếng Anh
