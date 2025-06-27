@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 from collections import Counter
-from function import load_dictionaries, extract_city, fast_translate, process_text
+from function import extract_city, fast_translate, process_text
 import datetime
 import os
 import joblib
@@ -11,7 +11,6 @@ from sklearn.decomposition import LatentDirichletAllocation
 # ================================
 # Load dữ liệu và model
 # ================================
-emoji_dict, teen_dict, wrong_lst, english_dict, stopwords_lst = load_dictionaries()
 Companies = pd.read_excel("Companies_Clean.xlsx")
 Reviews = pd.read_excel("Reviews_Clean.xlsx")
 
