@@ -471,7 +471,7 @@ elif st.session_state.active_tab == "Sentiment":
             if not selected_company_name:
                 st.error("❌ Please select a company to view its information!")
             else:
-                with st.modal(f"🏢 Company Information: {selected_company_name}", key="company_modal"):
+                with st.expander(f"🏢 Company Information: {selected_company_name}", expanded=True):
                     company_info = Companies[Companies["Company Name"] == selected_company_name].iloc[0]
                     company_reviews = Reviews[Reviews["Company Name"] == selected_company_name]
                     sentiment_counts = company_reviews["label_sentiment"].value_counts().to_dict()
