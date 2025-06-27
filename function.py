@@ -142,23 +142,23 @@ def classify_sentiment(row):
 #     return emoji_dict, teen_dict, wrong_lst, english_dict, stopwords_lst
 
 
-# #=================================================================
-# # Hàm rút gọn địa điểm
-# # Hàm rút gọn địa điểm
-# def extract_city(location_str):
-#     if pd.isna(location_str):
-#         return "Unknown"
-#     location_str = location_str.lower()
-#     if "hà nội" in location_str or "ha noi" in location_str:
-#         return "Hà Nội"
-#     elif "hồ chí minh" in location_str or "ho chi minh" in location_str or "hcm" in location_str:
-#         return "Hồ Chí Minh"
-#     elif "đà nẵng" in location_str or "da nang" in location_str:
-#         return "Đà Nẵng"
-#     elif "cần thơ" in location_str or "can tho" in location_str:
-#         return "Cần Thơ"
-#     else:
-#         return "Khác"
+#=================================================================
+# Hàm rút gọn địa điểm
+# Hàm rút gọn địa điểm
+def extract_city(location_str):
+    if pd.isna(location_str):
+        return "Unknown"
+    location_str = location_str.lower()
+    if "hà nội" in location_str or "ha noi" in location_str:
+        return "Hà Nội"
+    elif "hồ chí minh" in location_str or "ho chi minh" in location_str or "hcm" in location_str:
+        return "Hồ Chí Minh"
+    elif "đà nẵng" in location_str or "da nang" in location_str:
+        return "Đà Nẵng"
+    elif "cần thơ" in location_str or "can tho" in location_str:
+        return "Cần Thơ"
+    else:
+        return "Khác"
     
 #=================================================================
 # Chuẩn hóa về tiếng Anh
