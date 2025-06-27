@@ -33,4 +33,4 @@ Jupyter Notebook
 Clone the repository:
 Navigate to the project directory:
 Install the required dependencies:
-Run the Streamlit_App.py file:
+Run the App5.py file:
