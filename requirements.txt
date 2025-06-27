@@ -1,0 +1,24 @@
+streamlit
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+re
+matplotlib.pyplot
+underthesea
+sklearn
+regex
+string
+joblib
+pandas>=1.3
+numpy>=1.21
+scikit-learn>=1.0
+streamlit>=1.10
+nltk>=3.6
+joblib>=1.1
+regex>=2021.8.3
+openpyxl>=3.0
+import nltk
+nltk.download('punkt', quiet=True)
+
