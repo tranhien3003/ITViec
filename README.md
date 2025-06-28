@@ -1,5 +1,6 @@
 # ITViec
 Sentiment Analysis and Information Clustering for ITviec
+
 📊 Project Overview
 This project is designed to analyze user-generated reviews on ITviec.com — a leading job platform for IT professionals in Vietnam. The goal is to extract insights from these reviews to help partner companies understand their public perception and improve their employer branding.
 
