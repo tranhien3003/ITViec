@@ -108,7 +108,20 @@ with st.sidebar:
 # Trang chủ (Home)
 # ================================
 if st.session_state.active_tab == "Home":
-    st.markdown("<h1 style='text-align: center;'>Sentiment Analysis and Information Clustering</h1>", unsafe_allow_html=True)
+    st.markdown("""
+        <div style="
+            background-color: #f5f5f5; 
+            padding: 4px; 
+            border-radius: 8px; 
+            text-align: center; 
+            max-width: 1000px; 
+            margin: auto;
+        ">
+            <h1 style="color: #333333; margin: 0;">Employee Sentiment Analysis & Review Clustering</h1>
+        </div>
+    """, unsafe_allow_html=True)
+
+    
 
 
     # ✅ Hiển thị hình ảnh ở đầu trang
@@ -143,7 +156,18 @@ if st.session_state.active_tab == "Home":
 # Tab 2: Dashboard
 # ================================
 elif st.session_state.active_tab == "Dashboard":
-    st.title("📊Sentiment and Cluster Dashboard")
+    st.markdown("""
+        <div style="
+            background-color: #f5f5f5; 
+            padding: 4px; 
+            border-radius: 8px; 
+            text-align: center; 
+            max-width: 800px; 
+            margin: auto;
+        ">
+            <h1 style="color: #333333; margin: 0;">Sentiment and Clustering Dashboard</h1>
+        </div>
+    """, unsafe_allow_html=True)
 
     # Tạo cột thành phố từ Location
     Companies["City"] = Companies["Location"].apply(extract_city)
@@ -379,7 +403,18 @@ elif st.session_state.active_tab == "Dashboard":
 # Tab 3: Sentiment Predictor
 # ================================
 elif st.session_state.active_tab == "Sentiment":
-    st.title("💬 Sentiment Prediction & Clustering Reviews")
+    st.markdown("""
+        <div style="
+            background-color: #f5f5f5; 
+            padding: 4px; 
+            border-radius: 8px; 
+            text-align: center; 
+            max-width: 800px; 
+            margin: auto;
+        ">
+            <h1 style="color: #333333; margin: 0;">Sentiment Prediction & Clustering Reviews</h1>
+        </div>
+    """, unsafe_allow_html=True)
 
     # Load models
     model_Logistic = joblib.load("Logistic_Regression_sentiment_model.pkl")
