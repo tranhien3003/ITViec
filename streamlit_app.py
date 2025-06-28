@@ -464,7 +464,7 @@ elif st.session_state.active_tab == "Sentiment":
                     updated_df = pd.DataFrame([review_record])
 
                 updated_df.to_excel(output_path, index=False)
-                st.success("📝 Review của bạn đã được lưu thành công vào `Reviews_User_Web.xlsx`!")
+                st.success("📝 Your review has been save in `Reviews_User_Web.xlsx`!")
 
     with col_info:
         if st.button("ℹ️ Company Infor."):
