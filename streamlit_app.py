@@ -273,7 +273,7 @@ elif st.session_state.active_tab == "Dashboard":
         # ==== Stopwords và sửa từ sai ====
         custom_stopwords = {
             "are", "if", "each", "with", "some", "stil", "your", "get", "just", "was", "ful", "often",
-            "those", "sometimes", "most", "acording", "into", "does", "neds", "quản", "viên", "trị", "fuly"
+            "those", "sometimes", "most", "acording", "into", "does", "neds", "quản", "viên", "trị", "fuly",""
         }
 
         wrong_words_dict = {
@@ -377,7 +377,7 @@ elif st.session_state.active_tab == "Dashboard":
 # Tab 3: Sentiment Predictor
 # ================================
 elif st.session_state.active_tab == "Sentiment":
-    st.title("💬 Sentiment Predictor for Company Reviews")
+    st.title("💬 Sentiment Prediction & Clustering Reviews")
 
     # Load models
     model_Logistic = joblib.load("Logistic_Regression_sentiment_model.pkl")
@@ -403,7 +403,12 @@ elif st.session_state.active_tab == "Sentiment":
     culture = st.slider("🎉 Culture & fun", 1, 5, 3)
     workspace = st.slider("🏢 Office & workspace", 1, 5, 3)
 
-    recommend = st.selectbox("🤝 Would you recommend this company to friend?", ["Yes", "No"])
+    recommend = st.selectbox(
+    "🤝 Would you recommend this company to friend?",
+    ["---", "Yes", "No"],
+    index=0
+)
+
 
     st.write("### 👉 Step 2: Write your review")
     review_text = st.text_area("✍️ Your opinion", "")
@@ -427,7 +432,7 @@ elif st.session_state.active_tab == "Sentiment":
     col_predict, col_cluster, col_save, col_info = st.columns([1, 1, 1, 1])
 
     with col_predict:
-        if st.button("📊 Sentiment ?"):
+        if st.button("📊 Sentiment ?",help="Predict sentiment based on selected model"):
             if model_choice == "Logistic Regression":
                 prediction = model_Logistic.predict(input_data)[0]
             else:
@@ -436,9 +441,11 @@ elif st.session_state.active_tab == "Sentiment":
             st.success(f"✅ Sentiment predict ({model_choice}): **{labels[prediction]}**")
 
     with col_save:
-        if st.button("💾 Save Review"):
+        if st.button("💾 Save Review",help="Save your review"):
             if not selected_company_name:
                 st.error("❌ Please select a company before saving!")
+            elif recommend == "---":
+                st.error("❌ Please select your recomendation this company to others")
             else:
                 avg_rating = round((salary + training + management + culture + workspace) / 5, 1)
                 now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -467,7 +474,7 @@ elif st.session_state.active_tab == "Sentiment":
                 st.success("📝 Your review has been saved in `Reviews_User_Web.xlsx`!")
 
     with col_info:
-        if st.button("ℹ️ Company Infor."):
+        if st.button("ℹ️ Company Infor.",help="Click to see company information"):
             if not selected_company_name:
                 st.error("❌ Please select a company to view its information!")
             else:
@@ -515,7 +522,7 @@ elif st.session_state.active_tab == "Sentiment":
 
 
     with col_cluster:
-        if st.button("🧠 Cluster ?"):
+        if st.button("🧠 Cluster ?",help="Click to see clustering by LDA model"):
             if not review_text.strip():
                 st.error("❌ Please input a review before clustering.")
             else:
