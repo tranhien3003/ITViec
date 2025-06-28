@@ -273,7 +273,7 @@ elif st.session_state.active_tab == "Dashboard":
         # ==== Stopwords và sửa từ sai ====
         custom_stopwords = {
             "are", "if", "each", "with", "some", "stil", "your", "get", "just", "was", "ful", "often",
-            "those", "sometimes", "most", "acording", "into", "does", "neds", "quản", "viên", "trị", "fuly",""
+            "those", "sometimes", "most", "acording", "into", "does", "neds", "quản", "viên", "trị", "fuly",
         }
 
         wrong_words_dict = {
@@ -313,7 +313,9 @@ elif st.session_state.active_tab == "Dashboard":
             if "cluster" in filtered_df.columns:
                 # Lấy cluster phổ biến nhất để gợi ý
                 top_cluster = filtered_df["cluster"].value_counts().idxmax()
-                st.markdown(f"**📌 Recommendation (based on dominant cluster {top_cluster}):** {cluster_recommendations.get(top_cluster, 'No suggestion available')}")
+                cluster_name = topic_labels.get(top_cluster, f"Cluster {top_cluster}")
+                st.markdown(f"**📊 Dominant Cluster:** {cluster_name}")
+                st.markdown(f"**📌 Recommendation (based on dominant cluster):** {cluster_recommendations.get(top_cluster, 'No suggestion available')}")
 
         # ==== Làm sạch văn bản ====
         def clean_tokens(text_series):
