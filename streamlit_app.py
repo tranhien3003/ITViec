@@ -269,7 +269,7 @@ elif st.session_state.active_tab == "Dashboard":
     # -------------------------------
     st.subheader("📊 Cluster Dashboard")
 
-    with st.expander("📂 Click to seeInsights", expanded=False):
+    with st.expander("📂 Click to see Insights", expanded=False):
         # ==== Stopwords và sửa từ sai ====
         custom_stopwords = {
             "are", "if", "each", "with", "some", "stil", "your", "get", "just", "was", "ful", "often",
