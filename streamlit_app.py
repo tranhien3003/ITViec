@@ -96,20 +96,19 @@ st.markdown("""
 # Sidebar navigation
 with st.sidebar:
     st.markdown("### 📁 Navigation")
-
-    # Display user info
-    st.markdown("---")
-    st.markdown("Tran Thi Thu Hien")
-    st.markdown("Vo Huy Hoang")
-    st.markdown("tranhien.ueh@gmail.com")
-    st.markdown("---")
-
     if st.button("🏠 Home"):
         st.session_state.active_tab = "Home"
     if st.button("📊 Dashboard"):
         st.session_state.active_tab = "Dashboard"
     if st.button("💬 Sentiment & Clustering"):
         st.session_state.active_tab = "Sentiment"
+        # Display user info
+    st.markdown("---")
+    st.markdown("Group 14:")
+    st.markdown("Tran Thi Thu Hien")
+    st.markdown("Vo Huy Hoang")
+    st.markdown("tranhien.ueh@gmail.com")
+    st.markdown("---")
 
 
 
