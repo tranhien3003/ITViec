@@ -101,7 +101,7 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("Tran Thi Thu Hien")
     st.markdown("Vo Huy Hoang")
-    st.markdown("**📧 Email:tranhien.ueh@gmail.com")
+    st.markdown("tranhien.ueh@gmail.com")
     st.markdown("---")
 
     if st.button("🏠 Home"):
