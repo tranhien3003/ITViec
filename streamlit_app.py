@@ -104,10 +104,13 @@ with st.sidebar:
         st.session_state.active_tab = "Sentiment"
         # Display user info
     st.markdown("---")
-    st.markdown("Group 14:")
+    st.markdown("Team member:")
     st.markdown("Tran Thi Thu Hien")
-    st.markdown("Vo Huy Hoang")
     st.markdown("tranhien.ueh@gmail.com")
+    st.markdown("Vo Huy Hoang")
+    st.markdown("2356210012@hcmussh.edu.vn")
+    st.markdown("GVHD:")
+    st.markdown("Ms. Khuất Thùy Phương")
     st.markdown("---")
 
 
