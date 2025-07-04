@@ -319,19 +319,19 @@ elif st.session_state.active_tab == "Dashboard":
         }
 
         topic_labels = {
-            0: "💸 Cluster 1: Compensation & Work Pressure",
-            1: "🛠️ Cluster 2: Project & Process",
-            2: "👥 Cluster 3: Team Culture & Leadership",
-            3: "🏢 Cluster 4: Training & Work-Life Balance",
-            4: "🌱 Cluster 5: Growth & Development Opportunities"
+            0: "💸 Cluster 1: Salary, Projects & Work Conditionss",
+            1: "👥 Cluster 2: Employee Experience & HR Policies",
+            2: "🏢 Cluster 3: Workspace, Overtime & Compensation",
+            3: "🌱 Cluster 4: Culture, Leadership & Growth",
+            4: "🚀 Cluster 5: Facilities, Flexibility & Growth"
         }
 
         cluster_recommendations = {
-            0: "💡 Pay more, reduce overtime, improve management & workspace.",
-            1: "💡 Streamline process, empower leaders, support team collaboration.",
-            2: "💡 Build positive culture, train kind leaders, retain good teams.",
-            3: "💡 Provide more training, promote work-life balance, enhance benefits.",
-            4: "💡 Offer growth paths, upskill employees, expand opportunities."
+            0: "💡 Review salary policy, manage project load, reduce overtime, and improve office environment",
+            1: "💡 Improve benefits, review policies, support employees, and build positive culture",
+            2: "💡 Improve workspace, reduce overtime, and offer better pay & benefits",
+            3: "💡 Build open culture, support career growth, and train good leaders",
+            4: "💡 Upgrade workspace, support learning, and expand employee benefits"
         }
 
         # ==== Lựa chọn lọc ====
@@ -591,20 +591,20 @@ elif st.session_state.active_tab == "Sentiment":
 
                     # Mapping topic ID với nhãn ý nghĩa
                     topic_labels = {
-                        0: "💸 Cluster 1:  Compensation & Work Pressure",
-                        1: "🛠️ Cluster 2: Project & Process",
-                        2: "👥 Cluster 3: Team Culture & Leadership",
-                        3: "🏢 Cluster 4: Training & Work-Life Balance",
-                        4: "🌱 Cluster 5: Growth & Development Opportunities"
+                        0: "💸 Cluster 1:  Salary, Projects & Work Conditionss",
+                        1: "👥 Cluster 2: Employee Experience & HR Policies",
+                        2: "🏢 Cluster 3: Workspace, Overtime & Compensation",
+                        3: "🌱 Cluster 4: Culture, Leadership & Growth",
+                        4: "🚀 Cluster 5: Facilities, Flexibility & Growth"
                     }
 
                     # Gợi ý cải thiện theo cluster
                     cluster_recommendations = {
-                        0: "💡 Pay more, reduce overtime, improve management & workspace.",
-                        1: "💡 Streamline process, empower leaders, support team collaboration.",
-                        2: "💡 Build positive culture, train kind leaders, retain good teams.",
-                        3: "💡 Provide more training, promote work-life balance, enhance benefits.",
-                        4: "💡 Offer growth paths, upskill employees, expand opportunities."
+                        0: "💡 Review salary policy, manage project load, reduce overtime, and improve office environment",
+                        1: "💡 Improve benefits, review policies, support employees, and build positive culture",
+                        2: "💡 Improve workspace, reduce overtime, and offer better pay & benefits",
+                        3: "💡 Build open culture, support career growth, and train good leaders",
+                        4: "💡 Upgrade workspace, support learning, and expand employee benefits"
                     }
 
                     # Dự đoán phân phối topic
