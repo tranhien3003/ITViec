@@ -105,12 +105,12 @@ with st.sidebar:
     # Display user info
     st.markdown("---")
     
-    st.markdown("### 👩‍🏫 GVHD:")
+    st.markdown("### Project Supervisor:")
     st.markdown("- **Ms. Khuất Thùy Phương**")
     
-    st.markdown("### 👥 Team members:")
-    st.markdown("- **Tran Thi Thu Hien**  \n📧 [tranhien.ueh@gmail.com](mailto:tranhien.ueh@gmail.com)")
-    st.markdown("- **Vo Huy Hoang**  \n📧 [2356210012@hcmussh.edu.vn](mailto:2356210012@hcmussh.edu.vn)")
+    st.markdown("### Team members:")
+    st.markdown("- **Trần Thị Thu Hiền**  \n📧 [tranhien.ueh@gmail.com](mailto:tranhien.ueh@gmail.com)")
+    st.markdown("- **Võ Huy Hoàng**  \n📧 [2356210012@hcmussh.edu.vn](mailto:2356210012@hcmussh.edu.vn)")
     
     st.markdown("---")
 
