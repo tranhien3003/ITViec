@@ -102,17 +102,17 @@ with st.sidebar:
         st.session_state.active_tab = "Dashboard"
     if st.button("💬 Sentiment & Clustering"):
         st.session_state.active_tab = "Sentiment"
-        # Display user info
-        st.markdown("---")
-        
-        st.markdown("### 👩‍🏫 GVHD:")
-        st.markdown("- **Ms. Khuất Thùy Phương**")
-        
-        st.markdown("### 👥 Team members:")
-        st.markdown("- **Tran Thi Thu Hien**  \n📧 [tranhien.ueh@gmail.com](mailto:tranhien.ueh@gmail.com)")
-        st.markdown("- **Vo Huy Hoang**  \n📧 [2356210012@hcmussh.edu.vn](mailto:2356210012@hcmussh.edu.vn)")
-        
-        st.markdown("---")
+    # Display user info
+    st.markdown("---")
+    
+    st.markdown("### 👩‍🏫 GVHD:")
+    st.markdown("- **Ms. Khuất Thùy Phương**")
+    
+    st.markdown("### 👥 Team members:")
+    st.markdown("- **Tran Thi Thu Hien**  \n📧 [tranhien.ueh@gmail.com](mailto:tranhien.ueh@gmail.com)")
+    st.markdown("- **Vo Huy Hoang**  \n📧 [2356210012@hcmussh.edu.vn](mailto:2356210012@hcmussh.edu.vn)")
+    
+    st.markdown("---")
 
 
 
